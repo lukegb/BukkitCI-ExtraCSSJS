@@ -1,3 +1,5 @@
+var goAwayCounter;
+
 window.onload = function() {
   if (document.getElementById('j_username') !== null) {
     // we have a username field. this is probably the login page.
@@ -7,10 +9,14 @@ window.onload = function() {
     document.body.appendChild(el);
     var counter = 15;
     var counterEl = document.getElementById('overlord_counter');
-    setInterval(function() {
+    goAwayCounter = setInterval(function() {
       counter -= 1;
       counterEl.innerHTML = counter;
       if (counter == 0) window.location = "http://dl.bukkit.org";
     }, 1000);
+    counterEl.onclick = function() {
+      clearInterval(goAwayCounter);
+      el.parentElement.removeChild(el);
+    };
   }
 };
