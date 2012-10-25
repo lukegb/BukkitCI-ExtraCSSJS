@@ -7,7 +7,7 @@ window.onload = function() {
     document.body.appendChild(el);
     var counter = 15;
     var counterEl = document.getElementById('overlord_counter');
-    setTimeout(function() {
+    setInterval(function() {
       counter -= 1;
       counterEl.innerHTML = counter;
       if (counter == 0) window.location = "http://dl.bukkit.org";
