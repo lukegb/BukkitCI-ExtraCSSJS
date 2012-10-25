@@ -8,9 +8,8 @@ var forceApplyStyles = function(main, counter) {
   counter.setAttribute("style", b);
   var main_p = main.getElementsByTagName("p");
   for (var i in main_p) {
-    if (!main_p.hasOwnProperty(i)) continue;
     var mp = main_p[i];
-    console.log(main_p, i, mp);
+    if (!mp.setAttribute) continue;
     mp.setAttribute("style", a_p);
   }
 };
