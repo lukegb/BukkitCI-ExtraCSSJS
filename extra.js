@@ -1,6 +1,6 @@
 var goAwayCounter;
 
-var oldOnload = window.onload();
+var oldOnload = window.onload;
 window.onload = function() {
   oldOnload();
   if (document.getElementById('j_username') == null) { return; }
