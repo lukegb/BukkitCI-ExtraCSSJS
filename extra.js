@@ -10,6 +10,7 @@ var forceApplyStyles = function(main, counter) {
   for (var i in main_p) {
     if (!main_p.hasOwnProperty(i)) continue;
     var mp = main_p[i];
+    console.log(main_p, i, mp);
     mp.setAttribute("style", a_p);
   }
 };
