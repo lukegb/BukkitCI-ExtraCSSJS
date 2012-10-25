@@ -1,4 +1,4 @@
-#overlord {
+#overlord, .overlord {
   display: block;
   position: absolute;
   top: 0;
@@ -13,10 +13,10 @@
   z-index: 9001;
 }
 
-#overlord p {
+#overlord p, .overlord p {
   font-size: large;
 }
 
-#overlord_counter {
+#overlord_counter, .overlord_counter {
   font-size: x-large;
 }
